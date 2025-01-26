@@ -10,6 +10,16 @@ jobs:
   test:
     name: Test
     runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:12-alpine
+        env:
+          POSTGRES_USER: root
+          POSTGRES_PASSWORD: secret
+          POSTGRES_DB: simple_bank
+        ports:
+          - 5000:5432  # Ánh xạ port 5432 của container ra port 5000 trên host
+
     steps:
       - uses: actions/checkout@v4
 
