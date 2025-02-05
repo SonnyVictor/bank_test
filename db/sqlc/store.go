@@ -7,8 +7,8 @@ import (
 )
 
 type Store interface {
-	TransferTx(ctx context.Context, arg TransferTxParams) (TransferTxResult, error)
 	Querier
+	TransferTx(ctx context.Context, arg TransferTxParams) (TransferTxResult, error)
 }
 
 // Store provides all function excute bd queries and transactions
@@ -18,7 +18,7 @@ type SQLStore struct {
 }
 
 // NewStore creates a new store
-func NewStore(connPool *pgxpool.Pool) Store {
+func NewStore(connPool *pgxpool.Pool) *SQLStore {
 	return &SQLStore{
 		connPool: connPool,
 		Queries:  New(connPool),

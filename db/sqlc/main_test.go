@@ -7,6 +7,7 @@ import (
 	"testing"
 
 	"github.com/jackc/pgx/v5/pgxpool"
+	"github.com/sonnyvictok/bank_test/util"
 )
 
 const (
@@ -18,7 +19,12 @@ var testQueries *Queries
 var testDB *pgxpool.Pool
 
 func TestMain(m *testing.M) {
-	connPool, err := pgxpool.New(context.Background(), dbSource)
+	config, err := util.LoadConfig("../..")
+	if err != nil {
+		log.Fatal("Error Load config ", err)
+	}
+
+	connPool, err := pgxpool.New(context.Background(), config.DBSource)
 	if err != nil {
 		log.Fatal("Error connect to DB", err)
 	}
