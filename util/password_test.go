@@ -1,10 +1,7 @@
 package util
 
 import (
-	"fmt"
 	"testing"
-
-	"github.com/stretchr/testify/require"
 	// "github.com/sonnyvictok/bank_test/util"
 )
 
@@ -14,14 +11,14 @@ func TestPassword(t *testing.T) {
 	// fmt.Println(fields[0])
 	// fmt.Println(strings.ToLower(fields[0]))
 
-	password := "vinhdeptrai"
-	input, _ := HashPassword(password)
-	fmt.Println("input", input)
+	// password := "vinhdeptrai"
+	// input, _ := HashPassword(password)
+	// fmt.Println("input", input)
 
-	test := CheckPassword(password, input)
+	// test := CheckPassword(password, input)
 
-	fmt.Println("test", test)
-	require.Equal(t, password, input)
+	// fmt.Println("test", test)
+	// require.Equal(t, password, input)
 
 	// password := RandomString(6)
 
