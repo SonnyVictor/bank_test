@@ -21,8 +21,9 @@ func TestPasetoMaker(t *testing.T) {
 	duration := time.Minute
 	// issuedAt := time.Now()
 	// expiredAt := issuedAt.Add(duration)
-	createToken, err := randomPaseto.CreateToken("vinh", duration)
+	createToken, payload, err := randomPaseto.CreateToken("vinh", duration)
 	fmt.Println("createtoken", createToken)
+	fmt.Println("payload", payload)
 
 	//check token verify
 	check, err := randomPaseto.VerifyToken(createToken)
