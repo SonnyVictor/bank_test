@@ -1,20 +1,18 @@
 package util
 
 import (
-	"fmt"
-	"strings"
 	"testing"
 	// "github.com/sonnyvictok/bank_test/util"
 )
 
 func TestPassword(t *testing.T) {
-	fields := strings.Fields("Vinh dep trai")
+	// fields := strings.Fields("Vinh dep trai")
 
-	fmt.Println(fields[0])
-	fmt.Println(strings.ToLower(fields[0]))
+	// fmt.Println(fields[0])
+	// fmt.Println(strings.ToLower(fields[0]))
 
-	// password := "vinhdeptraiquadi"
-	// input, _ := HashPassword("vinhdeptraiquadi")
+	// password := "vinhdeptrai"
+	// input, _ := HashPassword(password)
 	// fmt.Println("input", input)
 
 	// test := CheckPassword(password, input)
